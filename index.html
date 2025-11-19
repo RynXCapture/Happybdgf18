@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -25,7 +25,7 @@
         transform-style: preserve-3d;
     }
 
-    /* ----- COUVERTURE (avec image floue derrière le texte) ----- */
+    /* COUVERTURE (image floue derrière texte) */
     .couverture {
         width: 100%;
         height: 100%;
@@ -41,19 +41,17 @@
         overflow: hidden;
     }
 
-    /* image de fond floue */
     .couverture::before {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url('IMG_0130.jpeg'); /* <<< Change ici l'image */
+        background-image: url('IMG_0130.jpeg'); /* couverture floue */
         background-size: cover;
         background-position: center;
         filter: blur(4px) brightness(0.8);
         z-index: 0;
     }
 
-    /* texte sur la couverture */
     .texte-couverture {
         position: relative;
         z-index: 1;
@@ -65,7 +63,7 @@
         pointer-events: none;
     }
 
-    /* ----- INTÉRIEUR ----- */
+    /* INTÉRIEUR */
     .interieur {
         width: 100%;
         height: 100%;
@@ -88,8 +86,7 @@
     }
 
     .gauche {
-        /* image non floue */
-        background-image: url('IMG_0159.jpeg'); /* <<< Change ici l'image */
+        background-image: url('IMG_0159.jpeg'); /* image non floue */
         background-size: cover;
         background-position: center;
     }
@@ -106,7 +103,7 @@
         line-height: 1.5;
     }
 
-    /* ----- BOUTON / LANGUETTE ----- */
+    /* BOUTON / LANGUETTE */
     .languette {
         margin-top: 20px;
         width: 160px;
@@ -128,26 +125,25 @@
 <div class="container">
     <div class="carte" id="carte">
 
-        <!-- ----- INTÉRIEUR ----- -->
+        <!-- INTÉRIEUR -->
         <div class="interieur">
-
-            <!-- PAGE GAUCHE (image) -->
+            <!-- Page gauche (image non floue) -->
             <div class="page gauche"></div>
 
-            <!-- PAGE DROITE (texte) -->
+            <!-- Page droite (texte) -->
             <div class="page droite">
                 <div class="texte">
                     🌸 Joyeux anniversaire !!! 🌸<br><br>
-                    18 ans aujourd'hui eh beh quand même !
+                    18 ans aujourd'hui eh beh quand même !<br>
                     je t'aime tellement mon petit bébé d'amour💕<br><br>
                     Tu es quelqu'un d'incroyable meu Anjinho 💗💗💗
                 </div>
             </div>
         </div>
 
-        <!-- ----- COUVERTURE ----- -->
+        <!-- COUVERTURE avec texte intégré -->
         <div class="couverture" id="couverture">
-            <div class="texte-couverture">Joyeux Anniversaire 💞</div>
+            <div class="texte-couverture">Joyeux Anniversaire 💖</div>
         </div>
 
     </div>
